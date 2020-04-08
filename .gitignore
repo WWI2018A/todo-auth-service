@@ -1,0 +1,5 @@
+#database
+data/keycloak_db
+
+#actual docker-compose file
+config/keycloak-compose.yml

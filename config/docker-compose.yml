@@ -1,0 +1,41 @@
+version: '3.7'
+
+networks:
+  keycloak_network:
+    driver: bridge
+
+services:
+  keycloak:
+    container_name: keycloak_app
+    image: jboss/keycloak
+    depends_on:
+      - mariadb
+    restart: always
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    environment:
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=password
+      - KEYCLOAK_FRONTEND_URL=sub.example.com/auth
+      - DB_VENDOR=mariadb
+      - DB_ADDR=mariadb
+      - DB_USER=keycloak
+      - DB_PASSWORD=pw
+      - PROXY_ADDRESS_FORWARDING=true
+    networks:
+      - keycloak_network
+
+  mariadb:
+    container_name: mariadb
+    image: mariadb
+    volumes:
+      - "/example/data/keycloak_db:/var/lib/mysql"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: pw
+      MYSQL_DATABASE: keycloak
+      MYSQL_USER: keycloak
+      MYSQL_PASSWORD: pw
+    networks:
+      - keycloak_network
