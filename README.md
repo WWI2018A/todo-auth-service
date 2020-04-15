@@ -16,9 +16,10 @@ To run this you will need to have docker, docker-compose installed on your machi
 
 ### Environment variables
 
- - `KEYCLOAK_USER` : name of the inital admin account
+ - `KEYCLOAK_USER`: name of the inital admin account
  - `KEYCLOAK_PASSWORD`: password of the initial admin account
  - `KEYCLOAK_FRONTEND_URL`: The url of the frontend (Example: `sub.example.com/api/v1/auth`)
+ - `KEYCLOAK_DEFAULT_THEME`: name of the default theme (in our case `todo-app`) 
  - `DB_VENDOR`: name of the database vendor
  - `DB_ADDR`: address of the database (url or ip)
  - `DB_USER`: user of the database 
