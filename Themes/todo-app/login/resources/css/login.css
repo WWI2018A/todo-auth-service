@@ -1,6 +1,7 @@
 .login-pf body {
-    background: url("../img/_MG_8249.jpg") no-repeat center center fixed;
+    background: rgb(186, 214, 229) center center;
     background-size: cover;
+    position: center;
     min-height: 100%;
     min-width: 100%;
 }
@@ -31,7 +32,7 @@
 #kc-locale ul li a {
     display: block;
     padding: 5px 14px;
-    color: #000 !important; ;
+    color: #000 !important;
     text-decoration: none;
     line-height: 20px;
 }
@@ -77,33 +78,17 @@ a#kc-current-locale-link::after {
 #kc-logo {
     width: 100%;
 }
-/*
-#kc-logo-wrapper {
-    background-image: url("../img/_MG_8249.jpg");
-    background-repeat: no-repeat;
-    height: 63px;
-    width: 300px;
-    margin: 62px auto 0;
-}
 
-div.kc-logo-text {
-    background-image: url("../img/_MG_8249.jpg");
-    background-repeat: no-repeat;
-    height: 63px;
-    width: 300px;
-    margin: 0 auto;
-}
-
- */
 
 div.kc-logo-text span {
     display: none;
 }
 
 #kc-header {
-    color: #ededed;
+    color: #000000;
     overflow: visible;
     white-space: nowrap;
+    font-family: Didot, "Didot LT STD", serif;
 
 }
 
@@ -112,7 +97,7 @@ div.kc-logo-text span {
     text-transform: uppercase;
     letter-spacing: 3px;
     line-height: 1.2em;
-    padding: 62px 10px 20px;
+    padding: 10px 10px 5px;
     white-space: normal;
 
 }
@@ -121,14 +106,14 @@ div.kc-logo-text span {
     width: 100%;
 }
 
-#kc-attempted-username{
+#kc-attempted-username {
     font-size: 20px;
-    font-family:inherit;
+    font-family: inherit;
     font-weight: normal;
-    padding-right:10px;
+    padding-right: 10px;
 }
 
-#kc-username{
+#kc-username {
     text-align: center;
 }
 
@@ -159,15 +144,17 @@ div.kc-logo-text span {
 }
 
 #kc-registration {
+    font-family: Didot, "Didot LT STD", serif;
     margin-bottom: 15px;
 }
 
 /* TOTP */
 
 .subtitle {
+    font-family: Didot, "Didot LT STD", serif;
     text-align: right;
     margin-top: 30px;
-    color: #909090;
+    color: #000000;
 }
 
 .required {
@@ -180,12 +167,12 @@ ol#kc-totp-settings {
 }
 
 ul#kc-totp-supported-apps {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 #kc-totp-secret-qr-code {
-    max-width:150px;
-    max-height:150px;
+    max-width: 150px;
+    max-height: 150px;
 }
 
 #kc-totp-secret-key {
@@ -242,187 +229,35 @@ ul#kc-totp-supported-apps {
     margin-top: 0;
 }
 
-.kc-login-tooltip{
-    position:relative;
+.kc-login-tooltip {
+    position: relative;
     display: inline-block;
 }
 
-.kc-login-tooltip .kc-tooltip-text{
-    top:-3px;
-    left:160%;
+.kc-login-tooltip .kc-tooltip-text {
+    top: -3px;
+    left: 160%;
     background-color: black;
     visibility: hidden;
     color: #fff;
 
-    min-width:130px;
+    min-width: 130px;
     text-align: center;
     border-radius: 2px;
-    box-shadow:0 1px 8px rgba(0,0,0,0.6);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
     padding: 5px;
 
     position: absolute;
-    opacity:0;
-    transition:opacity 0.5s;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 /* Show tooltip */
 .kc-login-tooltip:hover .kc-tooltip-text {
     visibility: visible;
-    opacity:0.7;
+    opacity: 0.7;
 }
 
-/* Arrow for tooltip */
-.kc-login-tooltip .kc-tooltip-text::after {
-    content: " ";
-    position: absolute;
-    top: 15px;
-    right: 100%;
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent black transparent transparent;
-}
-
-.zocial,
-a.zocial  {
-    width: 100%;
-    font-weight: normal;
-    font-size: 14px;
-    text-shadow: none;
-    border: 0;
-    background: #f5f5f5;
-    color: #72767b;
-    border-radius: 0;
-    white-space: normal;
-}
-.zocial:before {
-  border-right: 0;
-  margin-right: 0;
-}
-.zocial span:before {
-    padding: 7px 10px;
-    font-size: 14px;
-}
-.zocial:hover {
-    background: #ededed !important;
-}
-
-.zocial.facebook,
-.zocial.github,
-.zocial.google,
-.zocial.microsoft,
-.zocial.stackoverflow,
-.zocial.linkedin,
-.zocial.twitter {
-    background-image: none;
-    border: 0;
-
-    box-shadow: none;
-    text-shadow: none;
-}
-
-/* Copy of zocial windows classes to be used for microsoft's social provider button */
-.zocial.microsoft:before{ content: "\f15d"; }
-.zocial.stackoverflow:before{ color: inherit; }
-
-
-@media (min-width: 768px) {
-    #kc-container-wrapper {
-        position: absolute;
-        width: 100%;
-    }
-
-    .login-pf .container {
-        padding-right: 80px;
-    }
-
-    #kc-locale {
-        position: relative;
-        text-align: right;
-        z-index: 9999;
-    }
-}
-
-@media (max-width: 767px) {
-
-    .login-pf body {
-      background: white;
-    }
-
-    #kc-header {
-        padding-left: 15px;
-        padding-right: 15px;
-        float: none;
-        text-align: left;
-    }
-
-    #kc-header-wrapper {
-      font-size: 16px;
-      font-weight: bold;
-      padding: 20px 60px 0 0;
-      color: #72767b;
-      letter-spacing: 0;
-    }
-
-    div.kc-logo-text {
-        margin: 0;
-        width: 150px;
-        height: 32px;
-        background-size: 100%;
-    }
-
-    #kc-form {
-        float: none;
-    }
-
-    #kc-info-wrapper {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        margin-top: 15px;
-        padding-top: 15px;
-        padding-left: 0px;
-        padding-right: 15px;
-    }
-
-    #kc-social-providers li {
-        display: block;
-        margin-right: 5px;
-    }
-
-    .login-pf .container {
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-
-    #kc-locale {
-        position: absolute;
-        width: 200px;
-        top: 20px;
-        right: 20px;
-        text-align: right;
-        z-index: 9999;
-    }
-
-    #kc-logo-wrapper {
-        background-size: 100px 21px;
-        height: 21px;
-        width: 100px;
-        margin: 20px 0 0 20px;
-    }
-
-}
-
-@media (min-height: 646px) {
-    #kc-container-wrapper {
-        bottom: 12%;
-    }
-}
-
-@media (max-height: 645px) {
-    #kc-container-wrapper {
-        padding-top: 50px;
-        top: 20%;
-    }
-}
 
 .card-pf form.form-actions .btn {
     float: right;
@@ -430,97 +265,119 @@ a.zocial  {
 }
 
 #kc-form-buttons {
-    background: none;
-    background-color: rgb(2, 202, 102) !important;
+
     margin-top: 40px;
 }
 
 .login-pf-page .login-pf-brand {
-  margin-top: 20px;
-  max-width: 360px;
-  width: 40%;
+    font-family: Didot, "Didot LT STD", serif;
+    margin-top: 20px;
+    max-width: 360px;
+    width: 40%;
 }
 
 .card-pf {
-  background: #fff;
-  margin: 0 auto;
-  padding: 0 20px;
-  max-width: 500px;
-  border-top: 0;
-  box-shadow: 0 0 0;
+    background: #ffffff;
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 500px;
+    border-top: 0;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 /*tablet*/
 @media (max-width: 840px) {
-    .login-pf-page .card-pf{
-      max-width: none;
-      margin-left: 20px;
-      margin-right: 20px;
-      padding: 20px 20px 30px 20px;
+    .login-pf-page .card-pf {
+        max-width: none;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 20px 20px 30px 20px;
     }
 }
+
 @media (max-width: 767px) {
-    .login-pf-page .card-pf{
-      max-width: none;
-      margin-left: 0;
-      margin-right: 0;
-      padding-top: 0;
+    .login-pf-page .card-pf {
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: auto;
     }
-    .card-pf.login-pf-accounts{
-      max-width: none;
+
+    .card-pf.login-pf-accounts {
+        max-width: none;
     }
 }
 
 .login-pf-page .login-pf-signup {
-  font-size: 15px;
-  color: #72767b;
+    font-size: 15px;
+    color: #72767b;
 }
+
 #kc-content-wrapper .row {
-  margin-left: 0;
-  margin-right: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 @media (min-width: 768px) {
-  .login-pf-page .login-pf-social-section:first-of-type {
-    padding-right: 39px;
-    border-right: 1px solid #d1d1d1;
-    margin-right: -1px;
-  }
-  .login-pf-page .login-pf-social-section:last-of-type {
-    padding-left: 40px;
-  }
-  .login-pf-page .login-pf-social-section .login-pf-social-link:last-of-type {
-    margin-bottom: 0;
-  }
+    .login-pf-page .login-pf-social-section:first-of-type {
+        padding-right: 39px;
+        border-right: 1px solid #d1d1d1;
+        margin-right: -1px;
+    }
+
+    .login-pf-page .login-pf-social-section:last-of-type {
+        padding-left: 40px;
+    }
+
+    .login-pf-page .login-pf-social-section .login-pf-social-link:last-of-type {
+        margin-bottom: 0;
+    }
 }
 
 .login-pf-page .login-pf-social-link {
-  margin-bottom: 25px;
+    margin-bottom: 25px;
 }
+
 .login-pf-page .login-pf-social-link a {
-  padding: 2px 0;
+    padding: 2px 0;
 }
 
 .login-pf-page.login-pf-page-accounts {
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .login-pf-page .btn-primary {
+    font-family: Didot, "Didot LT STD", serif;
+    text-transform: uppercase;
+    font-stretch: expanded;
+    font-size: 15px;
+    border: none;
+    background: #BAE5D6 !important;
+    color: #000000;
     margin-top: 0;
+    letter-spacing: 3px;
+    line-height: 1.2em;
+    white-space: normal;
+
+}
+login-pf-page .btn-primary:hover{
+    background-color: #BAE5D6  !important;
+    color: #000000;
 }
 
 
 .login-pf-page .list-view-pf .list-group-item {
-    border-bottom: 1px solid #ededed;
+    border-bottom: 1px solid #BAE5D6;
 }
 
 .login-pf-page .list-view-pf-description {
     width: 100%;
 }
 
-.login-pf-page .card-pf{
-  margin-bottom: 10px;
+.login-pf-page .card-pf {
+    margin-bottom: 10px;
+    justify-content: center;
 }
 
 #kc-form-login div.form-group:last-of-type,
