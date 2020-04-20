@@ -1,9 +1,14 @@
+.login-pf-page {
+    padding: 0 0 0
+}
+
+
 .login-pf body {
     background: rgb(186, 214, 229) center center;
     background-size: cover;
-    position: center;
+    position: absolute;
     min-height: 100%;
-    min-width: 100%;
+    min-width:  100%;
 }
 
 .alert-error {
@@ -76,7 +81,14 @@ a#kc-current-locale-link::after {
 }
 
 #kc-logo {
-    width: 100%;
+    background-image: url("../img/Checked-double.png");
+    background-position: center;
+    background-size: cover ;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    top:0;
+    left: 200px;
 }
 
 
@@ -85,22 +97,47 @@ div.kc-logo-text span {
 }
 
 #kc-header {
-    color: #000000;
     overflow: visible;
-    white-space: nowrap;
-    font-family: Didot, "Didot LT STD", serif;
+
+
 
 }
 
 #kc-header-wrapper {
+    position: relative;
     font-size: 29px;
     text-transform: uppercase;
     letter-spacing: 3px;
     line-height: 1.2em;
-    padding: 10px 10px 5px;
+    padding: 20px 10px 15px;
     white-space: normal;
+    color: #ffffff;
+    overflow: visible;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    background-color: rgb(59, 59, 59);
+    font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+
 
 }
+/*
+#kc-header-wrapper-logo{
+   background-image: url("../img/Checked-double.png");
+    background-position: center;
+    background-size: cover ;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top:0;
+    left: 800px;
+}
+
+ */
+
+
+
 
 #kc-content {
     width: 100%;
@@ -140,7 +177,7 @@ div.kc-logo-text span {
 }
 
 #kc-terms-text {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 #kc-registration {
@@ -270,8 +307,9 @@ ul#kc-totp-supported-apps {
 }
 
 .login-pf-page .login-pf-brand {
+    background-image: url("../img/Checked-double.png");
     font-family: Didot, "Didot LT STD", serif;
-    margin-top: 20px;
+    margin-top:20px;
     max-width: 360px;
     width: 40%;
 }
