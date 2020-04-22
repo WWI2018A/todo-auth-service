@@ -84,8 +84,8 @@ a#kc-current-locale-link::after {
     background-image: url("../img/Checked-double.png");
     background-position: center;
     background-size: cover ;
-    height: 70px;
-    width: 70px;
+    height: 69px;
+    width: 69px;
     position: absolute;
     top:0;
     left: 200px;
